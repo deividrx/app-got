@@ -3,7 +3,19 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api: "https://thronesapi.com/api/v2",
+  authorizationUrl: 'https://3.225.79.27:9443/api/identity/entitlement/decision',
+  appName: 'app-got',
+  sso: {
+    clientId: 'aIg6jchenQaoWdTQ3wzenp6MM6ka ',
+    serverUrl: 'https://3.225.79.27:9443',
+    issuer: '/oauth2/oidcdiscovery',
+    redirectUri: window.location.origin,
+    scope: 'openid email profile',
+    showDebugInformation: true,
+    responseType: 'code',
+  }
 };
 
 /*

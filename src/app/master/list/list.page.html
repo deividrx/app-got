@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <ion-icon name="accessibility-outline"></ion-icon>
+      Personagens
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let item of data">
+    <ion-list-header>
+      {{item.fullName}}
+    </ion-list-header>
+
+    <ion-item-sliding>
+      <ion-item-options side="start">
+        <ion-item-option color="success">
+          <ion-icon slot="icon-only" name="archive"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+      <ion-item>
+        {{item.id + 1}} -
+        {{item.title}}: {{item.family}}
+        <ion-thumbnail slot="start">
+          <ion-img [src]="item.imageUrl" alt="{{item.family}} - {{item.fullName}}"></ion-img>
+        </ion-thumbnail>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option>
+          <ion-icon slot="icon-only" name="heart"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="danger">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+    </ion-item-sliding>
+
+  </ion-list>
+  <!-- <ion-card *ngFor="let item of data"> -->
+  <!--   <ion-img [src]="item.imageUrl" alt="{{item.family}} - {{item.fullName}}"></ion-img> -->
+  <!---->
+  <!--   <ion-card-header> -->
+  <!--     <ion-card-title>{{item.title}}</ion-card-title> -->
+  <!--   </ion-card-header> -->
+  <!---->
+  <!--   <ion-card-content> -->
+  <!--     {{item.fullName}} -->
+  <!--   </ion-card-content> -->
+  <!-- </ion-card> -->
+</ion-content>
